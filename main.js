@@ -17,8 +17,17 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 // Fetch deferral layer
 fetch('data/FADM_DESIGNATED_AREAS.geojson')
 .then(response => response.json())
-.then(data => L.geoJSON(data).addTo(mymap))
 .then(data => {
-  var area = geometry(data);
-  console.log(area)
+  data.type = 'GeometryCollection'
+  console.log(data)
+  let total_area_hect = 0
+  for(let feature of data.features) {
+    let area = geometry(feature.geometry) // m2
+    let area_hect = area*0.0001
+    console.log(area_hect)
+    total_area_hect += area_hect
+  }
+  console.log(total_area_hect)
+  return data
 })
+.then(data => L.geoJSON(data).addTo(mymap))
