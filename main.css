@@ -1,4 +1,18 @@
 #mapid {
-  height: 800px; 
-  width: 900px;
+  position: fixed;
+  right: 0px;
+  height: 98vh;
+  width: 60%;
+}
+
+.scroll-story {
+  position: absolute;
+  overflow-y: scroll;
+  width: calc(40% - 2em);
+  padding: 1em;
+  font-size: 20px;
+}
+
+section {
+  height: 100vh;
 }
