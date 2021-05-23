@@ -14,6 +14,41 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
   accessToken: 'your.mapbox.access.token'
 }).addTo(mymap);
 
+// Story scroll control
+// Set things up
+console.log(window)
+window.addEventListener("DOMContentLoaded", (event) => {
+  console.log("loaded", event)
+  createScrollyObservers();
+}, false);
+
+
+function createScrollyObservers() {
+  const sections = [
+    {id: 'intro', threshold: 0.4, lat: 54.230769547647085, lng: -124.66206000875113, zoom: 6},
+    {id: 'lakes', threshold: 0.4, lat: 49.09286680302231, lng: -125.54025650024414, zoom: 12},
+    {id: 'parks', threshold: 0.4, lat: 49.378367907281685, lng: -125.92300834404244, zoom: 10},
+    {id: 'second-growth', threshold: 0.4, lat: 51.01224410954622, lng: -117.56153868406271, zoom: 11},
+    {id: 'value-og', threshold: 0.4,  lat: 49.250885049725404, lng: -125.18843503480318, zoom: 11}
+  ]
+
+  for (let section of sections) {
+    console.log(section)
+    const el = document.querySelector(`#${section.id}`)
+    let options = {
+      threshold: [section.threshold]
+    }
+    let observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting == true) {
+        mymap.setView([section.lat, section.lng], section.zoom);
+      }
+
+    }, options);
+    observer.observe(el);
+  }
+
+}
+
 // Fetch deferral layer
 fetch('data/FADM_DESIGNATED_AREAS.geojson')
 .then(response => response.json())
@@ -36,3 +71,10 @@ fetch('data/FADM_DESIGNATED_AREAS.geojson')
   return data
 })
 .then(data => L.geoJSON(data).addTo(mymap))
+
+
+// For debugging view
+mymap.on('moveend', function(ev) {
+  console.log(ev.target.getZoom())
+  console.log(ev.target.getCenter())
+});
