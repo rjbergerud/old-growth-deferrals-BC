@@ -18,16 +18,21 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 fetch('data/FADM_DESIGNATED_AREAS.geojson')
 .then(response => response.json())
 .then(data => {
-  data.type = 'GeometryCollection'
-  console.log(data)
+  console.log(data.features);
+  let features = data.features
+  return features.filter(feature => feature.properties.BC_REGULATION_NUMBER
+   == "228/2020")
+
+ })
+.then(data => {
   let total_area_hect = 0
-  for(let feature of data.features) {
+  for(let feature of data) {
     let area = geometry(feature.geometry) // m2
     let area_hect = area*0.0001
     console.log(area_hect)
     total_area_hect += area_hect
   }
-  console.log(total_area_hect)
+  console.log("Total no hectares " + total_area_hect)
   return data
 })
 .then(data => L.geoJSON(data).addTo(mymap))
