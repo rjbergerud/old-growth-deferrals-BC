@@ -2,21 +2,17 @@ import L from  'leaflet'
 import { geometry } from '@mapbox/geojson-area'
 
 
-var mymap = L.map('mapid').setView([49.101563, -125.634364], 8);
+const mymap = L.map('mapid').setView([49.101563, -125.634364], 8);
 
 // Load baselayer
-L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoicnlkZXIxMjMiLCJhIjoiY2tveW4ydHFhMGl0dzJwcjk1MTJjeWlheSJ9.cYDVMjBJhW_T3IvgC1gPzw', {
-  attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-  maxZoom: 18,
-  id: 'mapbox/streets-v11',
-  tileSize: 512,
-  zoomOffset: -1,
-  accessToken: 'your.mapbox.access.token'
-}).addTo(mymap);
+L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+	attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
+	maxZoom: 16
+});
+L.tileLayer.provider('Esri.WorldTopoMap').addTo(mymap);
 
 // Story scroll control
 // Set things up
-console.log(window)
 window.addEventListener("DOMContentLoaded", (event) => {
   console.log("loaded", event)
   createScrollyObservers();
@@ -27,6 +23,7 @@ function createScrollyObservers() {
   const sections = [
     {id: 'intro', threshold: 0.4, lat: 54.230769547647085, lng: -124.66206000875113, zoom: 6},
     {id: 'lakes', threshold: 0.4, lat: 49.09286680302231, lng: -125.54025650024414, zoom: 12},
+    {id: 'subalpine', threshold: 0.4, lat: 51.01224410954622, lng: -117.56153868406271, zoom: 11},
     {id: 'parks', threshold: 0.4, lat: 49.378367907281685, lng: -125.92300834404244, zoom: 10},
     {id: 'second-growth', threshold: 0.4, lat: 51.01224410954622, lng: -117.56153868406271, zoom: 11},
     {id: 'value-og', threshold: 0.4,  lat: 49.250885049725404, lng: -125.18843503480318, zoom: 11}
@@ -40,7 +37,10 @@ function createScrollyObservers() {
     }
     let observer = new IntersectionObserver((entries) => {
       if (entries[0].isIntersecting == true) {
-        mymap.setView([section.lat, section.lng], section.zoom);
+        mymap.flyTo([section.lat, section.lng], section.zoom, {
+        animate: true,
+        duration: 1.5
+});
       }
 
     }, options);

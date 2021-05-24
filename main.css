@@ -1,7 +1,23 @@
+@font-face {
+  font-family: "BCSans-Regular";
+  src: url("https://cdn.jsdelivr.net/npm/@bcgov/bc-sans@1.0.1/fonts/BCSans-Regular.woff") format("woff");
+}
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:wght@400;500&family=Roboto:wght@300;400&display=swap');
+
+
+body {
+  font-family: "Roboto", "sans";
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Newsreader", "serif";
+}
+
 #mapid {
   position: fixed;
   right: 0px;
-  height: 98vh;
+  top: 0px;
+  height: 100vh;
   width: 60%;
 }
 
@@ -16,3 +32,7 @@
 section {
   height: 100vh;
 }
+/* https://cdn.jsdelivr.net/npm/@bcgov/bc-sans@1.0.1/fonts/BCSans-Bold.woff
+https://cdn.jsdelivr.net/npm/@bcgov/bc-sans@1.0.1/fonts/BCSans-BoldItalic.woff
+https://cdn.jsdelivr.net/npm/@bcgov/bc-sans@1.0.1/fonts/BCSans-Italic.woff
+https://cdn.jsdelivr.net/npm/@bcgov/bc-sans@1.0.1/fonts/BCSans-Regular.woff */
