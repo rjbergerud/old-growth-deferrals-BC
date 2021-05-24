@@ -2,15 +2,13 @@
   font-family: "BCSans-Regular";
   src: url("https://cdn.jsdelivr.net/npm/@bcgov/bc-sans@1.0.1/fonts/BCSans-Regular.woff") format("woff");
 }
-@import url('https://fonts.googleapis.com/css2?family=Newsreader:wght@400;500&family=Roboto:wght@300;400&display=swap');
-
 
 body {
-  font-family: "Roboto", "sans";
+  font-family: 'Roboto', serif;
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: "Newsreader", "serif";
+  font-family: 'Newsreader', serif;
 }
 
 #mapid {
@@ -18,20 +16,39 @@ h1, h2, h3, h4, h5 {
   right: 0px;
   top: 0px;
   height: 100vh;
-  width: 60%;
+  width: 55%;
 }
 
 .scroll-story {
   position: absolute;
   overflow-y: scroll;
-  width: calc(40% - 2em);
+  width: calc(45% - 2em);
   padding: 1em;
-  font-size: 20px;
+  font-size: 25px;
+  background: #111;
+  background-origin: content-box;
+  scrollbar-width: none;
+  top: 0px;
+  left: 0px;
+  color: FEFEFE;
 }
 
 section {
   height: 100vh;
 }
+
+.blurb {
+  height: 50vh;
+}
+
+.section-image {
+  height: 50vh;
+  margin: -1em;
+  overflow: hidden;
+  background-attachment: fixed;
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 0.9) 100%), url("https://live.staticflickr.com/8541/28792855430_2cde82cd33_b.jpg");
+}
+
 /* https://cdn.jsdelivr.net/npm/@bcgov/bc-sans@1.0.1/fonts/BCSans-Bold.woff
 https://cdn.jsdelivr.net/npm/@bcgov/bc-sans@1.0.1/fonts/BCSans-BoldItalic.woff
 https://cdn.jsdelivr.net/npm/@bcgov/bc-sans@1.0.1/fonts/BCSans-Italic.woff

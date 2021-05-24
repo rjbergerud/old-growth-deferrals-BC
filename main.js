@@ -9,6 +9,7 @@ L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_L
 	attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
 	maxZoom: 16
 });
+
 L.tileLayer.provider('Esri.WorldTopoMap').addTo(mymap);
 
 // Story scroll control
@@ -18,7 +19,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   createScrollyObservers();
 }, false);
 
-
+console.log("s")
 function createScrollyObservers() {
   const sections = [
     {id: 'intro', threshold: 0.4, lat: 54.230769547647085, lng: -124.66206000875113, zoom: 6},

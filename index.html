@@ -1,11 +1,15 @@
 <html>
 
 <head>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
   <link rel="stylesheet" href="main.css" />
+
   <!-- Make sure you put this AFTER Leaflet's CSS -->
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-providers/1.12.0/leaflet-providers.min.js" integrity="sha512-LixflAm9c0/qONbz9F1Ept+QJ6QBpb7wUlPuyv1EHloTVgwSK8j3yMV3elnElGQcv7Y5QTFlF/FqyeE/N4LnKQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-providers/1.12.0/leaflet-providers.min.js" integrity="sha512-LixflAm9c0/qONbz9F1Ept+QJ6QBpb7wUlPuyv1EHloTVgwSK8j3yMV3elnElGQcv7Y5QTFlF/FqyeE/N4LnKQ==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
@@ -13,7 +17,11 @@
     <h1> Deferrals Explanation </h1>
 
     <section id="intro">
-      Background:
+      <div class="blurb">
+        Background:
+      </div>
+      <div class='section-image'>
+      </div>
     </section>
 
     <section id="lakes">
@@ -37,8 +45,15 @@
       and most importantly, excludes areas of old growth forest most requiring protection (data from Holt, Price, et. al, see )
     </section>
 
+    <section id="credits">
+      Image credits:
+      <a href="https://www.flickr.com/photos/54677546@N02/28792855430">"Big Lonely Doug"</a><span> by <a href="https://www.flickr.com/photos/54677546@N02">timnutt</a></span> is licensed under <a
+        href="https://creativecommons.org/licenses/by-nc-sa/2.0/?ref=ccsearch&atype=html" style="margin-right: 5px;">CC BY-NC-SA 2.0</a>
+    </section>
+
   </div>
   <div id="mapid"></div>
 </body>
 <script src="bundle.js"></script>
+
 </html>
