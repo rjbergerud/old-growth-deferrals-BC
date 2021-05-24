@@ -1,5 +1,8 @@
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
+import serve from 'rollup-plugin-serve';
+import livereload from 'rollup-plugin-livereload';
+
 // rollup.config.js
 export default {
   external: ['leaflet', 'L'],
@@ -11,5 +14,7 @@ export default {
   plugins: [
       nodeResolve(),
       commonjs(),
+      serve(),
+      livereload(),
   ],
 };

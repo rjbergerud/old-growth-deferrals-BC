@@ -10,4 +10,4 @@ The goal is to analyze how much of the deferral are is actually unprotected old 
 
 Install rollup `npm i rollup --global`, and package dependencies through `npm install`.  
 
-To build, run `npm run build` or `npm run watch`
+To build and serve, run `npm run build` or `npm run watch`
