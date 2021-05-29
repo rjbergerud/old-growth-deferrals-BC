@@ -1,3 +1,5 @@
+
+(function(l, r) { if (l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (window.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(window.document);
 (function (L) {
     'use strict';
 
@@ -115,6 +117,11 @@
     window.addEventListener("DOMContentLoaded", (event) => {
       console.log("loaded", event);
       createScrollyObservers();
+    	const onFirstScroll = (event) => {
+    		document.getElementById('scroll-down-msg').style.opacity = 0;
+    		document.removeEventListener('scroll', onFirstScroll, false);
+    	};
+    	document.addEventListener('scroll', onFirstScroll);
     }, false);
 
     console.log("s");
@@ -137,9 +144,10 @@
         let observer = new IntersectionObserver((entries) => {
           if (entries[0].isIntersecting == true) {
             mymap.flyTo([section.lat, section.lng], section.zoom, {
-            animate: true,
-            duration: 1.5
-    });
+    	        animate: true,
+    	        duration: 1.5
+    				});
+    				document.getElementById('total-og-count').innerHTML = 1000;
           }
 
         }, options);
