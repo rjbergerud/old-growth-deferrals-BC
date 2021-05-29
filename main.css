@@ -56,6 +56,14 @@ blockquote {
   font-size: 3rem;
 }
 
+#scroll-down-msg {
+  position:fixed;
+  left: 1em;
+  bottom: 1em;
+  color: #FEFEFE;
+  background: #111111aa;
+  transition: visibility 1s, opacity 0.5s ease;
+}
 section {
   min-height: 70vh;
   margin-bottom: 2em;

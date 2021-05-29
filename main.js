@@ -17,6 +17,11 @@ L.tileLayer.provider('Esri.WorldTopoMap').addTo(mymap);
 window.addEventListener("DOMContentLoaded", (event) => {
   console.log("loaded", event)
   createScrollyObservers();
+	const onFirstScroll = (event) => {
+		document.getElementById('scroll-down-msg').style.opacity = 0;
+		document.removeEventListener('scroll', onFirstScroll, false)
+	}
+	document.addEventListener('scroll', onFirstScroll)
 }, false);
 
 console.log("s")
