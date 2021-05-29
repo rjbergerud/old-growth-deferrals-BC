@@ -1,59 +1,119 @@
-<html>
+ <html>
 
-<head>
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
-  <link rel="stylesheet" href="main.css" />
+ <head>
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+   <link rel="stylesheet" href="main.css" />
 
-  <!-- Make sure you put this AFTER Leaflet's CSS -->
-  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-providers/1.12.0/leaflet-providers.min.js" integrity="sha512-LixflAm9c0/qONbz9F1Ept+QJ6QBpb7wUlPuyv1EHloTVgwSK8j3yMV3elnElGQcv7Y5QTFlF/FqyeE/N4LnKQ==" crossorigin="anonymous"
-    referrerpolicy="no-referrer"></script>
-</head>
+   <!-- Make sure you put this AFTER Leaflet's CSS -->
+   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-providers/1.12.0/leaflet-providers.min.js" integrity="sha512-LixflAm9c0/qONbz9F1Ept+QJ6QBpb7wUlPuyv1EHloTVgwSK8j3yMV3elnElGQcv7Y5QTFlF/FqyeE/N4LnKQ==" crossorigin="anonymous"
+     referrerpolicy="no-referrer"></script>
+ </head>
 
-<body>
-  <div class="scroll-story">
-    <h1 id='title'> Deferrals Explanation </h1>
+ <body>
+   <div class="scroll-story">
+     <h1 id='title'> How much of the remaining unprotected old growth has BC deferred from logging? </h1>
+     <div class='section-image'>
+     </div>
+     <section id="intro">
+       <div class="blurb">
+         In September 2020, the BC government <a href="https://news.gov.bc.ca/releases/2020FLNR0058-001711">announced</a>:
+         <blockquote>
+           The B.C. government is taking a new, holistic approach as a first step for the benefit of all British Columbians to protect old-growth forests.
 
-    <section id="intro">
-      <div class="blurb">
-        Background:
-      </div>
-      <div class='section-image'>
-      </div>
-    </section>
+           This will include the protection of nine areas throughout the province, totalling almost 353,000 hectares.
 
-    <section id="lakes">
-      These deferral areas includes lakes
-    </section>
+           (&#x2026;)
 
-    <section id="subalpine">
-      areas that are not at risk of logging, including subalpine forest and glaciers
-    </section>
+           Initial actions government is taking in formulating an old-growth strategy include:
+           <ul>
+             <ls> deferring old forest harvesting in nine areas throughout the province totalling 352,739 hectares as a first step, and committing to engaging, initiating or continuing discussions with Indigenous leaders;
+             </ls>
+           </ul>
+         </blockquote>
 
-    <section id="parks">
-      <h3>Parks</h3>
-      includes already protected areas, including Strathcona provincial park.
-    </section>
+         So how much of these 353,000 hectares are actually old-growth?
+       </div>
+     </section>
 
-    <section id="second-growth">
-      Second growth forest, which are allowed to be cut.
-    </section>
+     <div class="section-image" style="background-image: url('https://live.staticflickr.com/1805/41083841080_60a04016db_b.jpg')">
+     </div>
+     <section id="lakes">
+       These deferral areas includes - hectares of ocean and lakes, so likely no old growth there
+     </section>
 
-    <section id="value-og">
-      and most importantly, excludes areas of old growth forest most requiring protection (data from Holt, Price, et. al, see )
-    </section>
+     <div class="section-image" style="background-image: url('https://live.staticflickr.com/7765/17828196739_e7172fc60c_b.jpg')"></div>
+     <section id="subalpine">
+       areas that are not at risk of logging, including subalpine forest and glaciers
+     </section>
 
-    <section id="credits">
-      Image credits:
-      <a href="https://www.flickr.com/photos/54677546@N02/28792855430">"Big Lonely Doug"</a><span> by <a href="https://www.flickr.com/photos/54677546@N02">timnutt</a></span> is licensed under <a
-        href="https://creativecommons.org/licenses/by-nc-sa/2.0/?ref=ccsearch&atype=html" style="margin-right: 5px;">CC BY-NC-SA 2.0</a>
-    </section>
+     <div class="section-image" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/21/Carmanah_walbran_park.jpg');  background-size: contain;"></div>
+     <section id="parks">
+       <h3>Parks</h3>
+       includes already protected areas, including Strathcona provincial park.
+     </section>
 
-  </div>
-  <div id="mapid"></div>
-</body>
-<script src="bundle.js"></script>
+     <div class="section-image" style="background-image: url('https://live.staticflickr.com/7257/7004898619_3a6085256e_b.jpg');"></div>
+     <section id="second-growth">
+       Existing clearcuts and second growth forest, which are allowed to be cut.
+     </section>
+     <div class="section-image" style="background-image: url('https://live.staticflickr.com/3559/3459663679_89b27a87fa_b.jpg')"></div>
+     <section id="value-og">
+       and most importantly, excludes areas of old growth forest most requiring protection (data from Holt, Price, et. al, see )
+     </section>
 
-</html>
+     <section id="shifting-cutting">
+       So what has the deferrals done? Defer logging on a very small amount of rare, high-productivity old-growth. How have forestry companies responsed? Here's the location of active cutblocks in 2019, 2020, and 2021.
+     </section>
+
+     <section id="credits">
+       <!-- html copied from https://search.creativecommons.org -->
+       <h3>Image credits:</h3>
+       <p style="font-size: 0.9rem;font-style: italic;"><a href="https://www.flickr.com/photos/54677546@N02/28792855430">"Big Lonely Doug"</a><span> by <a href="https://www.flickr.com/photos/54677546@N02">timnutt</a></span> is licensed under <a
+           href="https://creativecommons.org/licenses/by-nc-sa/2.0/?ref=ccsearch&atype=html" style="margin-right: 5px;">CC BY-NC-SA 2.0</a></p>
+
+       <p style="font-size: 0.9rem;font-style: italic;"><a href="https://www.flickr.com/photos/36543076@N00/17828196739">"WesternSelkirks"</a><span> by <a href="https://www.flickr.com/photos/36543076@N00">Dru!</a></span> is licensed under <a
+           href="https://creativecommons.org/licenses/by-nc/2.0/?ref=ccsearch&atype=html" style="margin-right: 5px;">CC BY-NC 2.0</a><a href="https://creativecommons.org/licenses/by-nc/2.0/?ref=ccsearch&atype=html" target="_blank"
+           rel="noopener noreferrer" style="display: inline-block;white-space: none;margin-top: 2px;margin-left: 3px;height: 22px !important;"><img style="height: inherit;margin-right: 3px;display: inline-block;"
+             src="https://search.creativecommons.org/static/img/cc_icon.svg?image_id=e87c75fc-5b47-4c71-a5f4-44918024fed8" /><img style="height: inherit;margin-right: 3px;display: inline-block;"
+             src="https://search.creativecommons.org/static/img/cc-by_icon.svg" /><img style="height: inherit;margin-right: 3px;display: inline-block;" src="https://search.creativecommons.org/static/img/cc-nc_icon.svg" /></a></p>
+
+       <p style="font-size: 0.9rem;font-style: italic;"><a href="https://www.flickr.com/photos/28648755@N07/41083841080">"Maitland Mountain in the Distance, Kennedy Lake"</a><span> by <a href="https://www.flickr.com/photos/28648755@N07">MIKOFOX ⌘
+             Reject Fear, Go Outdoors, Live Healthy</a></span>
+         is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/2.0/?ref=ccsearch&atype=html" style="margin-right: 5px;">CC BY-NC-SA 2.0</a><a href="https://creativecommons.org/licenses/by-nc-sa/2.0/?ref=ccsearch&atype=html"
+           target="_blank" rel="noopener noreferrer" style="display: inline-block;white-space: none;margin-top: 2px;margin-left: 3px;height: 22px !important;"><img style="height: inherit;margin-right: 3px;display: inline-block;"
+             src="https://search.creativecommons.org/static/img/cc_icon.svg?image_id=cdeb783a-33a6-43e7-b911-46a69e818a63" /><img style="height: inherit;margin-right: 3px;display: inline-block;"
+             src="https://search.creativecommons.org/static/img/cc-by_icon.svg" /><img style="height: inherit;margin-right: 3px;display: inline-block;" src="https://search.creativecommons.org/static/img/cc-nc_icon.svg" /><img
+             style="height: inherit;margin-right: 3px;display: inline-block;" src="https://search.creativecommons.org/static/img/cc-sa_icon.svg" /></a></p>
+
+       <p style="font-size: 0.9rem;font-style: italic;"><a href="https://commons.wikimedia.org/w/index.php?curid=7757965">"File:Carmanah walbran park.jpg"</a><span> by <span>Adam Walker, photographer</span></span> is licensed under <a
+           href="https://creativecommons.org/licenses/by-sa/3.0?ref=ccsearch&atype=html" style="margin-right: 5px;">CC BY-SA 3.0</a><a href="https://creativecommons.org/licenses/by-sa/3.0?ref=ccsearch&atype=html" target="_blank"
+           rel="noopener noreferrer" style="display: inline-block;white-space: none;margin-top: 2px;margin-left: 3px;height: 22px !important;"><img style="height: inherit;margin-right: 3px;display: inline-block;"
+             src="https://search.creativecommons.org/static/img/cc_icon.svg?image_id=c2603440-8cbc-44fd-a1ea-e2af6685cea0" /><img style="height: inherit;margin-right: 3px;display: inline-block;"
+             src="https://search.creativecommons.org/static/img/cc-by_icon.svg" /></a></p>
+
+       <p style="font-size: 0.9rem;font-style: italic;"><a href="https://www.flickr.com/photos/9522129@N03/7004898619">"Second growth logging in the Sayward Valley"</a><span> by <a
+             href="https://www.flickr.com/photos/9522129@N03">hanspetermeyer.com</a></span> is licensed under <a href="https://creativecommons.org/licenses/by-sa/2.0/?ref=ccsearch&atype=html" style="margin-right: 5px;">CC BY-SA 2.0</a><a
+           href="https://creativecommons.org/licenses/by-sa/2.0/?ref=ccsearch&atype=html" target="_blank" rel="noopener noreferrer" style="display: inline-block;white-space: none;margin-top: 2px;margin-left: 3px;height: 22px !important;"><img
+             style="height: inherit;margin-right: 3px;display: inline-block;" src="https://search.creativecommons.org/static/img/cc_icon.svg?image_id=6a255e58-6144-4e05-8dcc-fe7811244201" /><img
+             style="height: inherit;margin-right: 3px;display: inline-block;" src="https://search.creativecommons.org/static/img/cc-by_icon.svg" /><img style="height: inherit;margin-right: 3px;display: inline-block;"
+             src="https://search.creativecommons.org/static/img/cc-sa_icon.svg" /></a></p>
+
+       <p style="font-size: 0.9rem;font-style: italic;"><a href="https://www.flickr.com/photos/15485948@N07/3459663679">"3
+           sisters"</a><span> by <a href="https://www.flickr.com/photos/15485948@N07">ramonarifkin</a></span> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/2.0/?ref=ccsearch&atype=html" style="margin-right: 5px;">CC
+           BY-NC-SA 2.0</a><a href="https://creativecommons.org/licenses/by-nc-sa/2.0/?ref=ccsearch&atype=html" target="_blank" rel="noopener noreferrer"
+           style="display: inline-block;white-space: none;margin-top: 2px;margin-left: 3px;height: 22px !important;"><img style="height: inherit;margin-right: 3px;display: inline-block;"
+             src="https://search.creativecommons.org/static/img/cc_icon.svg?image_id=86af435a-1149-410f-86ea-4efeec35b33c" /><img style="height: inherit;margin-right: 3px;display: inline-block;"
+             src="https://search.creativecommons.org/static/img/cc-by_icon.svg" /><img style="height: inherit;margin-right: 3px;display: inline-block;" src="https://search.creativecommons.org/static/img/cc-nc_icon.svg" /><img
+             style="height: inherit;margin-right: 3px;display: inline-block;" src="https://search.creativecommons.org/static/img/cc-sa_icon.svg" /></a></p>
+
+     </section>
+
+   </div>
+   <div id="mapid"></div>
+ </body>
+ <script src="bundle.js"></script>
+
+ </html>
