@@ -39,9 +39,10 @@ function createScrollyObservers() {
     let observer = new IntersectionObserver((entries) => {
       if (entries[0].isIntersecting == true) {
         mymap.flyTo([section.lat, section.lng], section.zoom, {
-        animate: true,
-        duration: 1.5
-});
+	        animate: true,
+	        duration: 1.5
+				});
+				document.getElementById('total-og-count').innerHTML = 1000
       }
 
     }, options);
